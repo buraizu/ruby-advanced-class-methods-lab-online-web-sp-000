@@ -63,5 +63,9 @@ class Song
     @@all << new_song
   end
 
+  def destroy_all
+    @@all.clear
+  end
+
 
 end
