@@ -54,5 +54,14 @@ class Song
      new_song
   end
 
+  def create_from_filename(data)
+    song = data.split("-")
+    artist = song[0].strip
+    name = song[1].chop.chop.chop.chop.strip
+    new_song = new_by_name(name)
+    new_song.artist_name = artist_name
+    @@all << new_song
+  end 
+
 
 end
