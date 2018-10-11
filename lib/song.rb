@@ -46,13 +46,13 @@ class Song
   end
 
   def self.new_from_filename(data)
-   song = data.split("-")
-   artist = song[0].chop!
-   song_title = song[1].chop!.chop!.chop!.chop!.strip!
-   track = self.find_or_create_by_name(song_title)
-   track.artist_name = artist
-   @@all << track
- end
+     song = data.split("-")
+     artist = song[0].strip
+     name = song[1].chop!.chop!.chop!.chop!.strip
+     new_song = new_by_name(name)
+     new_song.artist_name = artist
+     @@all << new_song
+  end
 
 
 end
