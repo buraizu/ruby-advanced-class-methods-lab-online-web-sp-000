@@ -61,7 +61,8 @@ class Song
     new_song = new_by_name(name)
     new_song.artist_name = artist_name
     @@all << new_song
-  end 
+    new_song
+  end
 
 
 end
